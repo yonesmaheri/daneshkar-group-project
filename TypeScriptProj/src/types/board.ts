@@ -1,10 +1,13 @@
-export type Task = {
-  id: string
-  title: string
-}
+export type Priority = "low" | "medium" | "high";
+export type Status = "todo" | "in-progress" | "done";
 
-export type Column = {
-  id: string
-  title: string
-  tasks: Task[]
+export interface Task {
+  id: string;
+  projectId: string;
+  title: string;
+  description: string;
+  priority: Priority;
+  status: Status;
+  dueDate: string;
+  assignedTo: string;
 }
